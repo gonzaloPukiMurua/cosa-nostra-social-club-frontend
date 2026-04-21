@@ -46,6 +46,36 @@ const HERO_CONTENT = {
   }
 };
 
+const MENU_CATEGORIES = ["Todos", "Burgers", "Sides", "Bebidas"];
+
+const MENU_ITEMS = [
+  {
+    id: "1",
+    title: "Godfather Burger",
+    description: "Doble smash patty (200g), triple cheddar, bacon ahumado y nuestra salsa secreta Cosa Nostra.",
+    price: 12500,
+    category: "Burgers",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000",
+    tags: ["Best Seller"]
+  },
+  {
+    id: "2",
+    title: "Papas Criminales",
+    description: "Papas triple cocción bañadas en cheddar fundido, verdeo y trozos de bacon crocante.",
+    price: 6500,
+    category: "Sides",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1000",
+  },
+  {
+    id: "3",
+    title: "Stella Artois",
+    description: "Cerveza premium tirada, bien fría. 500ml.",
+    price: 4500,
+    category: "Bebidas",
+    image: "https://images.unsplash.com/photo-1535954439472-475348d753ad?q=80&w=1000",
+  }
+];
+
 // ----------------------------------------------------------------------
 // 2. MAIN PAGE COMPONENT
 // ----------------------------------------------------------------------
@@ -83,7 +113,10 @@ export default function CosaNostraPage() {
             we will pass them props just like Navbar and Hero.
         */}
         <section id="menu" className="scroll-mt-20">
-          <Menu />
+          <Menu 
+            categories={MENU_CATEGORIES}
+            items={MENU_ITEMS}
+            accentColor={BRAND.accentColor}/>
         </section>
 
         <section id="club" className="scroll-mt-20">
