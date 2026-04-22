@@ -1,0 +1,9 @@
+// Sanity client configuration
+// Fill NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET in .env.local
+
+export const sanityConfig = {
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? '',
+  dataset:   process.env.NEXT_PUBLIC_SANITY_DATASET   ?? 'production',
+  apiVersion: '2024-01-01', // pin to a date, never use 'latest'
+  useCdn: true,             // true = fast cached reads (fine for static content)
+};
